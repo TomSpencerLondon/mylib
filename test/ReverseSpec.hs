@@ -8,3 +8,4 @@ spec :: Spec
 spec = do
   describe "myReverse" $ do
     it "handles empty lists" $ myReverse [] `shouldBe` ([] :: [Int])
+    it "reverses hello" $ myReverse "hello" `shouldBe` "olleh"
