@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 560f201396cd4421eda694a7e72703bf340854763d3eba48b7d781cc1709ca8d
+-- hash: cf80a5a526d545cfcd20c634891ca1c1cb6b99d070c42162e4ac18b5c763a59b
 
 name:           mylib
 version:        0.1.0.0
@@ -40,6 +40,7 @@ library
   build-depends:
       base >=4.11 && <10
     , rio >=0.1.12.0
+    , vector >=0.12.0.3
   default-language: Haskell2010
 
 executable mylib-exe
@@ -54,6 +55,7 @@ executable mylib-exe
     , mylib
     , optparse-simple
     , rio >=0.1.12.0
+    , vector >=0.12.0.3
   default-language: Haskell2010
 
 test-suite mylib-test
@@ -71,4 +73,5 @@ test-suite mylib-test
     , hspec
     , mylib
     , rio >=0.1.12.0
+    , vector >=0.12.0.3
   default-language: Haskell2010

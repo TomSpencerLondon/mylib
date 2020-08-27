@@ -13,3 +13,11 @@ spec = do
   describe "betterReverse" $ do
     prop "behaves the same as myReverse" $ \list ->
       betterReverse list `shouldBe` myReverse (list :: [Int])
+
+  describe "compare with Data.List reverse" $ do
+    prop "vectorReverse" $ \list ->
+      vectorReverse list `shouldBe` (reverse (list :: [Int]))
+    prop "svectorReverse" $ \list ->
+      svectorReverse list `shouldBe` (reverse (list :: [Int]))
+    prop "uvectorReverse" $ \list ->
+      uvectorReverse list `shouldBe` (reverse (list :: [Int]))
